@@ -119,7 +119,7 @@ src
 
 ## Post-MVP
 
--__allows users to write views for each list
+-_allows users to write views for each list
 
 ***
 
