@@ -119,7 +119,9 @@ src
 
 ## Post-MVP
 
-- _allows users to write views for each list
+- allows users to write views for each list
+- pop up screen for log-in
+- several windows to create items
 
 ***
 
