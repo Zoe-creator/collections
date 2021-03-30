@@ -2,7 +2,7 @@
 
 ## Overview
 
-_**Collections** 
+**Collections Forum** 
 enables users to posts wishing collections and others may contact them if they have it. 
 
 <br>
@@ -11,7 +11,7 @@ enables users to posts wishing collections and others may contact them if they h
 
 - enables loggin in users to post list, delete list that belongs to them
 - showing all users'posts' of all lists
-- user's shopping bag, save-for-later bag
+- user's save-for-later bag
 
 <br>
 
@@ -122,6 +122,7 @@ src
 - allows users to write views for each list
 - pop up screen for log-in
 - several windows to create items
+- showing all users'posts' of all lists
 
 ***
 
