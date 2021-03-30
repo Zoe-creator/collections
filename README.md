@@ -48,9 +48,7 @@ enables users to posts wishing collections and others may contact them if they h
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+![Component Tree ](https://res.cloudinary.com/lizhenwen727/image/upload/v1617068066/Screen_Shot_2021-03-29_at_9.33.43_PM_zai6w7.png)
 
 #### Component Architecture
 
@@ -65,7 +63,22 @@ src
       |__ images
       |__ mockups
 |__ components/
-      |__ Header.jsx
+      |__ layout.jsx
+      |__ footer.jsx
+      |__ nav.jsx
+      |__ item.jsx
+|__ screens/
+      |__ landingpage.jsx
+      |__ home.jsx
+      |__ itemEdit.jsx
+      |__ itemCreate.jsx
+      |__ register.jsx
+      |__ logIn.jsx
+      |__ Mylists.jsx
+      |__ wanted.jsx
+      |__ ItemDetail.jsx
+|__ containers/
+      |__ listings.jsx
 |__ services/
 
 ```
@@ -76,11 +89,26 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| layout.jsx    |    L     |    1  hrs      |      hrs     |     hrs    |
+|  landingPage.jsx   |    L     |     4 hrs      |      hrs     |     hrs    |
+|  register.jsx   |    L     |    1  hrs      |      hrs     |     hrs    |
+|  nav.jsx   |    L     |     1 hrs      |      hrs     |     hrs    |
+|   item.jsx  |    L     |     1 hrs      |      hrs     |     hrs    |
+|   home.jsx  |    L     |    4  hrs      |      hrs     |     hrs    |
+|   itemEdit  |    L     |     2 hrs      |      hrs     |     hrs    |
+|   myLists.jsx  |    L     |    4  hrs      |      hrs     |     hrs    |
+|   wanted.jsx  |    L     |    5  hrs      |      hrs     |     hrs    |
+|  itemDetail.jsx   |    L     |    4  hrs      |      hrs     |     hrs    |
+|   footer.jsx  |    L     |    1  hrs      |      hrs     |     hrs    |
+|   itemCreate.jsx  |    L     |    4  hrs      |      hrs     |     hrs    |
+|  login.jsx   |    L     |    1  hrs      |      hrs     |     hrs    |
+|   listing.jsx  |    L     |    3  hrs      |      hrs     |     hrs    |
+|   basic css  |    L     |     3 hrs      |      hrs     |     hrs    |
+|   media query css  |    L     |    3  hrs      |      hrs     |     hrs    |
+|   backend  |    L     |     8 hrs      |      hrs     |     hrs    |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+| TOTAL               |          |     50 hrs      |      hrs     |     TBD     |
+
 
 <br>
 
