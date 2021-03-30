@@ -2,7 +2,7 @@
 
 ## Collections Forum
 
-enables users to posts wishing collections and others may contact them if they have it. 
+enables users to posts wishing collections and others may contact them if they have it,leave comments on items. 
 
 <br>
 
@@ -25,7 +25,7 @@ enables users to posts wishing collections and others may contact them if they h
 |      React       | _Front-End._
 |   React Router   | _keeps UI in sync with the URL._ |
 | Ruby on Rails             | _database-backend._ |
-|    Ruby      | _Lorem ipsum dolor sit amet, consectetur._ |
+|    Ruby      | _set up backend router,model,controller_ |
 |  Express Router  | _create router handlers._ |
 
 <br>
