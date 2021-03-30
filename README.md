@@ -106,7 +106,6 @@ src
 |   basic css  |    L     |     3 hrs      |      hrs     |     hrs    |
 |   media query css  |    L     |    3  hrs      |      hrs     |     hrs    |
 |   backend  |    L     |     8 hrs      |      hrs     |     hrs    |
-
 | TOTAL               |          |     50 hrs      |      hrs     |     TBD     |
 
 
