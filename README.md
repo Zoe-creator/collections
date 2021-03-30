@@ -15,12 +15,7 @@ enables users to posts wishing collections and others may contact them if they h
 
 <br>
 
-### Goals
 
-- _allows users to write views for each list
-
-
-<br>
 
 ### Libraries and Dependencies
 
@@ -124,7 +119,7 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+-__allows users to write views for each list
 
 ***
 
