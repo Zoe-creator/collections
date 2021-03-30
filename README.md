@@ -1,8 +1,7 @@
 
 
-## Overview
+## Collections Forum
 
-**Collections Forum** 
 enables users to posts wishing collections and others may contact them if they have it. 
 
 <br>
