@@ -14,6 +14,12 @@ enables users to posts wishing collections and others may contact them if they h
 
 <br>
 
+### Goals
+
+- _User CRUD_
+- _Posts CRUD_
+
+<br>
 
 
 ### Libraries and Dependencies
@@ -27,6 +33,7 @@ enables users to posts wishing collections and others may contact them if they h
 | Ruby on Rails             | _database-backend._ |
 |    Ruby      | _set up backend router,model,controller_ |
 |  Express Router  | _create router handlers._ |
+|    bcrypt     | _Library for hashing passwords_                      |
 
 <br>
 
@@ -76,7 +83,17 @@ src
 |__ services/
 
 ```
+#### Component Breakdown
 
+| Component |    Type    | state | props | Description                      |
+| :-------: | :--------: | :---: | :---: | :------------------------------- |
+|    Nav    | functional |   y   |   n   | _Nav will link to other screens_ |
+| Homepage  | functional |   y   |   n   | _Shows all posts_                    |
+|   Post    | functional |   y   |   y   | _Create posts_                   |
+|  Sign In  | functional |   y   |   y   | _Sign In_                        |
+|  Sign Up  | functional |   y   |   y   | _Sign Up_                        |
+
+<br>
 #### Time Estimates
 
 > Use this section to estimate the time necessary to build out each of the components you've described above.
