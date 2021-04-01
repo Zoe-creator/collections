@@ -3,16 +3,16 @@ import { useParams } from 'react-router-dom';
 import { getOnePost } from '../../services/posts';
 import { useHistory } from 'react-router-dom';
 import { createComment } from '../../services/comments'
-import { createLike, deleteLike} from '../../services/likes'
+import { createLike, deleteLike } from '../../services/likes'
 import { AdminContext } from '../../context/adminContext';
 
-export default function PostDetails({currentUser}) {
+export default function PostDetails({ currentUser }) {
   const [postDetails, setPostDetails] = useState(null);
   const { id } = useParams();
   const { push } = useHistory();
   const [input, setInput] = useState();
   const { admin } = useContext(AdminContext);
-  const history=useHistory()
+  const history = useHistory()
   const [post, setPost] = useState();
   const [liked, setLiked] = useState();
   const [totalLikes, setTotalLikes] = useState(0);
@@ -21,7 +21,7 @@ export default function PostDetails({currentUser}) {
   console.log(admin.id)
   console.log(id)
 
-  // totalComments > 1 ? (comment = 'comments') : (comment = 'comment');
+//  totalComments > 1 ? (comment = 'comments') : (comment = 'comment');
 
   useEffect(() => {
     const fetchOnePost = async () => {
@@ -44,6 +44,7 @@ export default function PostDetails({currentUser}) {
   //   const likedPost = post.like.find(one => one.user_id === post.user_id);
   //   setLiked(likedPost);
   // }, []);
+
 
 
   const handleCommentSubmit = async () => {
@@ -89,56 +90,58 @@ export default function PostDetails({currentUser}) {
     if (liked) {
       if (liked.user_id === currentUser.id) {
         handleDeleteLike(liked.id);
-      } 
+      }
     } else {
       handleLike();
     }
   };
 
- 
+
 
   const handleChange = e => {
     const { value } = e.target;
     setInput(value);
   };
 
-  
+
   return (
     <div>
       <div>
-         <h3>{postDetails?.title}</h3>
-      <img src={postDetails?.img_url} />
-      <h3>{postDetails?.description}</h3>
+        <h3>Name of Collection: {postDetails?.title}</h3>
+        <img src={postDetails?.img_url} alt={postDetails?.title} />
+        <h3>Author's description of Collection: {postDetails?.description}</h3>
       </div>
-      <p>{totalLikes}</p>
-      <div >
-           <div className='like' onClick={toggleLike}>
-              {liked && liked.user_id === currentUser.id ? (
-                <div>👍</div>
-              ) : (
-                <div>👍🏿</div>
-              )}
-      
+      {currentUser &&
+        <div >
+        <div className='like' onClick={toggleLike}>
+          {liked && liked.user_id === currentUser.id ? (
+            <div>👍</div>
+          ) : (
+            <div>👍🏿</div>
+          )}
+          <p>{totalLikes}</p>
         </div>
-        
-            <textarea
-              type='text'
-              placeholder= {`Share Your Thoughts...`}
-              value={input}
-              onChange={handleChange}
-            />
-            <div className='send-icon'>
-              <button onClick={handleCommentSubmit}>Add A Comment</button>
-            </div>
-          </div>
+
+        <textarea
+          type='text'
+          placeholder={`Share Your Thoughts...`}
+          value={input}
+          onChange={handleChange}
+        />
+        <div className='send-icon'>
+          <button onClick={handleCommentSubmit}>Add A Comment</button>
+        </div>
+      </div> 
+  }
+     
 
       <div className='comments'>
         <p>Comments:</p>
-           {post?.comments.map(comment => (
-        <p key={comment.id}>{comment.comment_text}</p>
-      ))} 
-</div>
-  
+        {post?.comments.map(comment => (
+          <p key={comment.id}>{comment.comment_text}</p>
+        ))}
+      </div>
+
 
     </div>
   )

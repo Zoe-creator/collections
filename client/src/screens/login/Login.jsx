@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
-    username: '',
+    email: '',
     password: ''
   })
-  const { username, password } = formData;
+  const { email, password } = formData;
   const { handleLogin } = props;
 
   const handleChange = (e) => {
@@ -18,24 +18,25 @@ export default function Login(props) {
   }
 
   return (
-    <form onSubmit={(e)=>{
+    <div>
+        <form onSubmit={(e)=>{
       e.preventDefault();
       handleLogin(formData);
     }}>
       <h3>Login</h3>
       <label>
-        Username:
         <input
           type='text'
-          name='username'
-          value={username}
+          name='email'
+          placeholder='email'
+          value={email}
           onChange={handleChange}
         />
       </label>
       <br />
       <label>
-        Password:
         <input
+           placeholder='password'
           type='password'
           name='password'
           value={password}
@@ -43,9 +44,12 @@ export default function Login(props) {
         />
       </label>
       <br />
-      <Link to='/register'>Register</Link>
       <button>Submit</button>
     </form>
+      <Link to='/register'>I need an account </Link>
+  
+    </div>
+
   )
 }
 
