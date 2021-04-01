@@ -2,11 +2,12 @@ import { useState,useContext } from 'react'
 import {useParams} from "react-router-dom"
 import { AdminContext } from '../../context/adminContext';
 
+import "./PostCreate.css"
+
 export default function PostCreate(props) {
   const { admin } = useContext(AdminContext);
-console.log(admin)
   const { handleCreate, currentUser } = props;
-  console.log(currentUser)
+
   const [formData, setFormData] = useState({
    user_id:currentUser.id,
     title: '',
@@ -25,15 +26,17 @@ console.log(admin)
       [name]: value
     }))
   }
-
+//   const handleError = (e) => {
+//   e.target.src='https://www.elegantthemes.com/blog/wp-content/uploads/2020/08/000-http-error-codes.png'
+// }
   return (
-    <form onSubmit={(e) => {
+    <form className="create-form" onSubmit={(e) => {
       e.preventDefault();
       handleCreate(formData);
     }}>
-      <h3>Create Food</h3>
+      <h3>Create A Collection</h3>
       <label>
-        Name:
+        Name of Your Collection:
         <input
           type='text'
           name='title'
@@ -43,7 +46,7 @@ console.log(admin)
       </label>
       <label>
         Description:
-        <input
+        <textarea
           type='text'
           name='description'
           value={description}
@@ -51,12 +54,13 @@ console.log(admin)
         />
       </label>
       <label>
-        img_url:
+        Image-Link:
         <input
           type='text'
           name='img_url'
           value={img_url}
           onChange={handleChange}
+          // onError={handleError}
         />
         {/* {checkImage()} */}
       </label>

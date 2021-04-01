@@ -49,7 +49,9 @@ export default function MainContainer({currentUser}) {
     <Switch>
       <Route path='/profile/:id'>
             <Profile
-              currentUser={currentUser}
+          currentUser={currentUser}
+          posts={posts}
+          handleDelete={handleDelete}
             />
       </Route>
       

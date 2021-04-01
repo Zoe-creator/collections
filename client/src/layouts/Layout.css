@@ -1,0 +1,12 @@
+
+.greeting{
+  color: rgb(51, 2, 2);
+  font-size: 25px;
+}
+a{
+  text-decoration: none;
+}
+
+nav a{
+ padding-left: 30px;
+}

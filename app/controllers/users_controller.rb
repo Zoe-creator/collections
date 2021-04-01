@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
 
-    render json: @users, include: {posts: {include: :comments}}, status: :ok
+    render json: @users, include: [{posts: {include: :comments}}, :profile], status: :ok
   end
 
   # GET /users/1

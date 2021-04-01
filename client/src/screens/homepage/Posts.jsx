@@ -1,37 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Modal from '../../components/modal/Modal';
+import "../homepage/Posts.css"
 
-export default function Posts({ posts, handleDelete, currentUser }) {
-  const [open, handleOpen] = useState(false)
+export default function Posts({ posts }) {
 
   return (
-    <div>
+    <div className="home-img" >
       {
-        posts.map(post => (
-          <React.Fragment key={post.id}>
-            <Link to={`/posts/${post.id}`}><p>{post.title}</p></Link>
-
-            {
-              currentUser?.id === post.user_id &&
-              <>
-                <Link to={`/posts/${post.id}/edit`}><button>Edit</button></Link>
-                <button onClick={() => handleOpen(post.id)}>delete</button>
-              </>
-            }
-          </React.Fragment>
-        ))
+        posts.map(post =>
+          <Link key={post.id} to={`/posts/${post.id}`}><img src={post.img_url} alt={post.title} /></Link>
+        )
       }
       <br />
-      <Link to='/posts/new'><button>Create</button></Link>
-      {open && (
-        <Modal
-          open={open}
-          handleOpen={handleOpen}
-          handleDelete={handleDelete}
-        />
-      )}
     </div>
   )
 }

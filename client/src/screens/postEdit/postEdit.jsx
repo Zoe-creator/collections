@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import './PostEdit.css'
+
 export default function PostEdit({ posts, handleUpdate }) {
   const [formData, setFormData] = useState({
     title: '',
@@ -58,9 +60,9 @@ export default function PostEdit({ posts, handleUpdate }) {
       e.preventDefault();
       handleUpdate(id, formData);
     }}>
-      <h3>Edit a Post</h3>
+      <h3>Edit My Collection</h3>
       <label>
-        Name:
+        Name of Your Collection:
         <input
           type='text'
           name='title'
@@ -69,8 +71,8 @@ export default function PostEdit({ posts, handleUpdate }) {
         />
       </label>
       <label>
-        Name:
-        <input
+       Description:
+        <textarea
           type='text'
           name='description'
           value={description}
@@ -78,7 +80,7 @@ export default function PostEdit({ posts, handleUpdate }) {
         />
       </label>
       <label>
-        Name:
+       Image-Link:
         <input
           type='text'
           name='img_url'
@@ -87,7 +89,7 @@ export default function PostEdit({ posts, handleUpdate }) {
         />
         {/* {checkImage()} */}
       </label>
-      <button>Submit</button>
+      <button className="submit-button">Submit</button>
     </form>
   )
 }
