@@ -1,0 +1,28 @@
+.register{
+  font: italic small-caps bold 25px/30px Georgia, serif;
+  margin-top:0;
+  margin-bottom:0;
+}
+.login-link{
+  color:rgb(49, 21, 43,0.5);
+  font-family:system-ui;
+  font-size:16px;
+  -webkit-text-stroke: 1px rgb(39, 36, 36);
+  font-weight:bold
+}
+
+.register-form{
+  display: flex;
+  flex-direction: column;
+  max-height:450px;
+}
+
+.register-form label{
+margin-bottom: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .register{
+    font: italic small-caps bold 16px/30px Georgia, serif
+  }
+}

@@ -1,0 +1,29 @@
+.like{
+  display: flex;
+  left:-100vh;
+  /* z-index: 2; */
+}
+.post-comments{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  justify-content:space-evenly;
+  align-items: center;
+}
+.comment {
+  display: flex;
+  margin:auto;
+  max-width: 70%;
+  min-width:70%;
+}
+.comment-submit{
+display: flex;
+
+width:120px;
+text-align: center;
+}
+.comments {
+  display: flex;
+  max-height:50vh;
+  overflow-y: scroll;
+}

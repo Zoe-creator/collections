@@ -1,0 +1,25 @@
+.details-comments{
+  display:flex;
+  flex-direction: row;
+  width:90%;
+  align-items: center;
+}
+
+.details{
+  display: flex;
+flex-direction: column;
+width:60%;
+align-items: center;
+/* top: -200px; */
+/* justify-content: space-between; */
+}
+.detail-img{
+  display: flex;
+  max-width:100%;
+}
+.detail-description{
+  display: flex;
+  flex-direction: column;
+align-items: center;
+justify-content:last baseline;
+}

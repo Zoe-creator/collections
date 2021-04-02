@@ -1,0 +1,25 @@
+div{
+  display: flex;
+  flex-direction: column;
+}
+.login{
+font: italic small-caps bold 30px/30px Georgia, serif
+}
+
+.register-link{
+  color:rgb(49, 21, 43,0.5);
+  font-family:system-ui;
+  font-size:16px;
+  -webkit-text-stroke: 1px rgb(104, 51, 250);
+  font-weight:bold;
+
+}
+
+.login-form{
+  height:300px;
+}
+
+.login-form label{
+  margin-bottom: 0;
+  }
+

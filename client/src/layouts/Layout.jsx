@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 
@@ -10,33 +10,33 @@ export default function Layout(props) {
   console.log(currentUser)
 
   const [greeting, setGreeting] = useState("")
-  const [hour,setHour]=useState()
-  
+  const [hour, setHour] = useState()
+
 
   const getHour = () => {
     const hourNow = new Date().getHours()
     setHour(hourNow)
   }
-  
-  
+
+
   useEffect(() => {
     getHour()
     console.log(hour)
-   if (hour < 12 ) {
-    setGreeting("Morning")
-  } else if (hour <18 ) {
-    setGreeting("Afternoon")
-   }else {
-    setGreeting("Night")
-  }
+    if (hour < 12) {
+      setGreeting("Morning")
+    } else if (hour < 18) {
+      setGreeting("Afternoon")
+    } else {
+      setGreeting("Night")
+    }
   }, [hour])
 
- 
+
 
   return (
     <div>
       <header>
-        <Link to='/posts'><h1>Collection Forum</h1></Link>
+        <Link to='/posts'><h1 className="web-title">Collection Forum</h1></Link>
         {
           currentUser ?
             <>
@@ -45,10 +45,8 @@ export default function Layout(props) {
             </>
             :
             <nav>
-
-                          <Link to='/login'>Login/Register</Link>
-                          <Link to='/posts'>Posts</Link>
-
+              <Link to='/login'>Login/Register</Link>
+              <Link to='/posts'>Posts</Link>
             </nav>
         }
       </header>

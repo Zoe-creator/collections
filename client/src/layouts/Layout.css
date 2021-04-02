@@ -10,3 +10,11 @@ a{
 nav a{
  padding-left: 30px;
 }
+.web-title{
+  color:rgb(68, 31, 31,0.5);
+  font-family:system-ui;
+  font-size:4rem;
+  -webkit-text-stroke: 1px rgb(48, 2, 75);
+  font-weight:bold
+
+}
