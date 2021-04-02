@@ -87,9 +87,9 @@ export default function PostComment({ currentUser, postDetails }) {
   };
 
   return (
-    <div>
+    <div className='comment'>
       {currentUser &&
-        <div >
+        <div className="like-comment">
           <div className='like' onClick={toggleLike}>
             {liked && liked.user_id === currentUser.id ? (
               <div>👍</div>
@@ -101,7 +101,7 @@ export default function PostComment({ currentUser, postDetails }) {
           <div className='post-comments'>
             <textarea
               type='text'
-              className='comment'
+              className='comment-text-area'
               placeholder={`Share Your Thoughts...`}
               value={input}
               onChange={handleChange}
@@ -113,13 +113,13 @@ export default function PostComment({ currentUser, postDetails }) {
         </div>
       }
 
-
+<p>Comments:</p>
       <div className='comments'>
-        <p>Comments:</p>
+        
         {post?.comments.map(comment =>
           <div className='comments-detail'>
-            <p>Comment by: {currentUser?.username}</p>
-            <p key={comment.id}>{comment.comment_text}</p>
+            <p className='comment-author'>Comment by: {currentUser?.username}</p>
+            <p className='comment-text' key={comment.id}>{comment.comment_text}</p>
           </div>
 
         )}

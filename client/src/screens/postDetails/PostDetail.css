@@ -1,3 +1,7 @@
+.comment{
+display: flex;
+width:50%
+}
 .details-comments{
   display:flex;
   flex-direction: row;
@@ -8,7 +12,7 @@
 .details{
   display: flex;
 flex-direction: column;
-width:60%;
+width:50%;
 align-items: center;
 /* top: -200px; */
 /* justify-content: space-between; */
@@ -22,4 +26,16 @@ align-items: center;
   flex-direction: column;
 align-items: center;
 justify-content:last baseline;
+}
+
+@media (max-width: 500px) {
+  .details-comments{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details{
+    width:100%;
+    align-items: center;
+  }
 }
