@@ -1,11 +1,8 @@
-import { useState,useContext } from 'react'
-import {useParams} from "react-router-dom"
-import { AdminContext } from '../../context/adminContext';
+import { useState } from 'react'
 
 import "./PostCreate.css"
 
 export default function PostCreate(props) {
-  const { admin } = useContext(AdminContext);
   const { handleCreate, currentUser } = props;
 
   const [formData, setFormData] = useState({

@@ -40,7 +40,7 @@ button{
 }
 .posts-action{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width:30%;
 }
 .posts-action *{

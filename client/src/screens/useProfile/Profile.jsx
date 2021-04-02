@@ -14,9 +14,6 @@ const UserProfile = ({ currentUser, posts, handleDelete }) => {
   const [userProfile, setUserProfile] = useState()
   const [open, handleOpen] = useState(false)
 
-
-
-
   // const handleUpdateClick = async () => {
   //   await updateProfile(+id, { post_text: input });
   //   push('/profile');

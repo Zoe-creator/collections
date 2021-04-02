@@ -10,7 +10,6 @@ import MainContainer from './containers/MainContainer';
 import Layout from './layouts/Layout';
 import Login from './screens/login/Login';
 import Register from './screens/register/Register';
-import Profile from './screens/useProfile/Profile'
 
 // function imports
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
@@ -67,7 +66,6 @@ function App() {
               currentUser={currentUser}
             />
           </Route>
-
         </Switch>
       </Layout>
     </div>

@@ -5,14 +5,12 @@ import PostDetails from '../screens/postDetails/PostDetails';
 import PostEdit from '../screens/postEdit/postEdit';
 import Posts from '../screens/homepage/Posts';
 import Profile from '../screens/useProfile/Profile'
-import {useParams} from "react-router-dom"
 
 import { deletePost, updatePost, getAllPosts,createPost } from '../services/posts';
 
 export default function MainContainer({currentUser}) {
   const [posts, setPosts] = useState([]);
   const history = useHistory();
-  const [user,setUser]=useState([])
   // const { id } = useParams();
   // console.log(id)
   
@@ -44,6 +42,8 @@ export default function MainContainer({currentUser}) {
     await deletePost(id);
     setPosts(prevState => prevState.filter(post => post.id !== id))
   }
+
+
 
   return (
     <Switch>
