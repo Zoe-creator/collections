@@ -35,7 +35,7 @@ export default function MainContainer({currentUser}) {
     setPosts(prevState => prevState.map(post => {
       return post.id === +id ? updatedPost : post
     }))
-    history.push('/posts');
+    history.push(`/profile/${currentUser.id}`);
   }
 
   const handleDelete = async (id) => {

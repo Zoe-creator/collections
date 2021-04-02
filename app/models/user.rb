@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :comments, through: :posts
-  has_many :likes
+  has_many :likes,  dependent: :destroy
   has_one :profile
 
   has_secure_password

@@ -63,10 +63,10 @@ export default function PostComment({ currentUser, postDetails}) {
             />
             <button className='comment-submit' onClick={handleCommentSubmit}>Add A Comment</button>
           </div>
-
       }
-
-      <p>Comments:</p>
+      {(post?.comments.length >= 0 && currentUser) ?
+        <p>Comments:</p> : <p>you may log in to write a comment!</p>}
+    
       <div className='comments'>
         {post?.comments.map(comment =>
           <div className='comments-detail'>
