@@ -3,11 +3,15 @@ import { useParams } from 'react-router-dom';
 import { getOnePost } from '../../services/posts';
 import { createComment } from '../../services/comments'
 import { createLike, deleteLike } from '../../services/likes'
+import { Switch, Route, useHistory } from 'react-router-dom';
+
 
 import './Comment.css'
 
 export default function PostComment({ currentUser, postDetails }) {
   const { id } = useParams();
+  const history = useHistory()
+
   const [input, setInput] = useState();
   const [post, setPost] = useState();
   const [liked, setLiked] = useState(null);
@@ -28,14 +32,16 @@ export default function PostComment({ currentUser, postDetails }) {
         comment_text: input
       });
       //fetch new comment
-      fetchPost();
+      // history.push( `/posts/${id}`);
+      await fetchPost()
       setInput('');
+
     } catch (error) {
       console.log(error);
     }
   };
   console.log(post)
-  
+
   const fetchPost = async () => {
     const response = await getOnePost(id);
     setPost(response);
