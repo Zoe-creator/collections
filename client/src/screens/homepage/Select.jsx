@@ -38,7 +38,7 @@ const Select = (props) => {
                 onChange={handleChange}
                 type="checkbox"
                 style={{backgroundColor: `yellow`}}
-                check={isChecked}
+                check={isChecked.toString()}
                 value={item.case}
               />
             </label>
