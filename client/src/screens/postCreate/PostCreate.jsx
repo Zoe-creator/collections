@@ -13,7 +13,7 @@ export default function PostCreate(props) {
     img_url: ''
   })
 
-  const categoriesOptions = ["Unknown", "Book", "Fossile", "Jewelry", "Game", "Toy","Doll", "Tech","Bag"]
+  const categoriesOptions = ["Unknown", "Book", "Fossile", "Jewelry", "Game", "Toy", "Doll", "Tech", "Bag"]
 
   const { user_id, title, description, categories, img_url } = formData;
 
@@ -26,10 +26,10 @@ export default function PostCreate(props) {
   }
 
   return (
-    <form className="create-form"  className="create"onSubmit={(e) => {
+    <form className="create-form" className="create" onSubmit={(e) => {
       e.preventDefault();
       handleCreate(formData);
-     
+
     }}>
       <h3>Create A Collection</h3>
       <label>
@@ -66,7 +66,7 @@ export default function PostCreate(props) {
           name="categories"
           required
           onChange={handleChange} >
-          <option value="" >Make a Selection</option>
+          <option value="">Make a Selection</option>
           {categoriesOptions.map((category, index) =>
             <option value={category} key={index} >{category}</option>
           )}

@@ -23,18 +23,17 @@ export default function PostDetails({ currentUser}) {
 
   const toggleLike = () => {
     if (liked) {
-      if (liked.user_id === currentUser.id) {
+      if (liked.user_id === currentUser?.id) {
         handleDeleteLike(liked.id);
       }
     } else {
       handleLike();
-
     };
   }
 
   useEffect(() => {
     fetchPost();
-    const likedPost = post?.likes.find(post => post.user_id === postDetails.user_id);
+    const likedPost = post?.likes.find(post => post.user_id === postDetails?.user_id);
     setLiked(likedPost);
   }, [id]);
 
@@ -50,7 +49,7 @@ export default function PostDetails({ currentUser}) {
   const handleLike = async () => {
     try {
       const response = await createLike({
-        user_id: currentUser.id,
+        user_id: currentUser?.id,
         post_id: postDetails.id
       });
       await fetchPost();
@@ -76,7 +75,7 @@ export default function PostDetails({ currentUser}) {
         {currentUser &&
           <div className="like-comment">
             <div className='like' onClick={toggleLike}>
-              {liked && liked.user_id === currentUser.id ? (
+              {liked && liked.user_id === currentUser?.id ? (
                 <div>👍</div>
               ) : (
                 <div>👍🏿</div>

@@ -24,9 +24,6 @@ const Select = (props) => {
     setIsChecked((curr) => !curr)
   }
 
-  const styleCheckedBox = {
-    "color":"blue"
-  }
   return (
     <div className="select-box">
       {

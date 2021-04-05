@@ -31,7 +31,7 @@ export default function Layout(props) {
         {
           currentUser ?
             <>
-              <p className="greeting">Good {greeting}, {currentUser.username}</p>
+              <p className="greeting">Good {greeting}, {currentUser?.username}</p>
               <button onClick={handleLogout}>Logout</button>
             </>
             :
@@ -45,7 +45,7 @@ export default function Layout(props) {
       {currentUser && (
         <nav>
           <Link to='/posts'>Posts</Link>
-          <Link to={`/profile/${currentUser.id}`}>Profile</Link>
+          <Link to={`/profile/${currentUser?.id}`}>Profile</Link>
           <Link to='/posts/new'>Post A Collection</Link>
           <hr />
         </nav>
