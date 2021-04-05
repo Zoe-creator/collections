@@ -65,7 +65,7 @@ export default function PostDetails({ currentUser}) {
     setTotalLikes(response.likes.length);
   };
 
-  console.log(postDetails)
+  console.log(postDetails?.user.username)
   return (
     <div className='details-comments'>
 
@@ -85,10 +85,13 @@ export default function PostDetails({ currentUser}) {
               <p>{totalLikes}</p>
             </div>
           </div>}
+        
         <div className='detail-description'>
+          <p>Posted by: { postDetails?.user.username}</p>
           <p>Name of Collection: {postDetails?.title}</p>
           <p>Description : {postDetails?.description}</p>
         </div>
+
       </div>
       <Comment currentUser={currentUser} postDetails={postDetails}/>
 
