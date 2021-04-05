@@ -25,7 +25,7 @@ export default function Layout(props) {
   }, [hour])
 
   return (
-    <div>
+    <div className="header">
       <header>
         <Link to='/posts'><h1 className="web-title">Collection Forum</h1></Link>
         {
@@ -41,7 +41,7 @@ export default function Layout(props) {
             </nav>
         }
       </header>
-      <hr />
+      {/* <hr /> */}
       {currentUser && (
         <nav>
           <Link to='/posts'>Posts</Link>
