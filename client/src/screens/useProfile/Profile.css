@@ -2,18 +2,15 @@
   display:flex;
 flex-direction:column;
 width:100%;
-/* align-items: center; */
 }
 .user-info{
   display: flex;
   
   flex-direction:column;
 align-items: center;
-  /* justify-content: center; */
   width:50%;
   margin:auto;
   box-shadow:5px 10px #4d0f38 ;
-
   border:3px solid rgba(71, 6, 38, 0.7);
 }
 .profile-img-update{
@@ -103,6 +100,9 @@ button{
 }
 
 @media (max-width: 500px) {
+  .user-info{
+    width:80%;
+  }
   .user-posts{
     flex-direction: column;
   }
