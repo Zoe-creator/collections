@@ -6,26 +6,22 @@ export default function PostCreate(props) {
   const { handleCreate, currentUser } = props;
 
   const [formData, setFormData] = useState({
-   user_id:currentUser.id,
+    user_id: currentUser.id,
     title: '',
     description: '',
     img_url: ''
   })
   const { user_id, title, description, img_url } = formData;
-  
-
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
- 
+
       [name]: value
     }))
   }
-//   const handleError = (e) => {
-//   e.target.src='https://www.elegantthemes.com/blog/wp-content/uploads/2020/08/000-http-error-codes.png'
-// }
+
   return (
     <form className="create-form" onSubmit={(e) => {
       e.preventDefault();
@@ -57,7 +53,7 @@ export default function PostCreate(props) {
           name='img_url'
           value={img_url}
           onChange={handleChange}
-          // onError={handleError}
+        // onError={handleError}
         />
         {/* {checkImage()} */}
       </label>

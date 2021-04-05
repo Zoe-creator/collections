@@ -4,12 +4,10 @@
   /* z-index: 2; */
 }
 .comment{
- display: flex;
- width:50%;
- align-items: center;
- flex-direction: column;
-
-
+  display: flex;
+  width:100%;
+  align-items: center;
+  flex-direction: column;
 }
 .like-comment{
   display: flex;
@@ -24,8 +22,8 @@
 }
 .comment-text-area {
   display: flex;
- width:100%;
- min-height:100px;
+  width:100%;
+  min-height:100px;
 }
 .comment-submit{
 display: flex;

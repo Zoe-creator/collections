@@ -6,15 +6,11 @@ import PostEdit from '../screens/postEdit/postEdit';
 import Posts from '../screens/homepage/Posts';
 import Profile from '../screens/useProfile/Profile'
 
-import { deletePost, updatePost, getAllPosts,createPost } from '../services/posts';
+import { deletePost, updatePost, getAllPosts, createPost } from '../services/posts';
 
-export default function MainContainer({currentUser}) {
+export default function MainContainer({ currentUser }) {
   const [posts, setPosts] = useState([]);
   const history = useHistory();
-  // const { id } = useParams();
-  // console.log(id)
-  
-  console.log(currentUser)
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -43,18 +39,16 @@ export default function MainContainer({currentUser}) {
     setPosts(prevState => prevState.filter(post => post.id !== id))
   }
 
-
-
   return (
     <Switch>
       <Route path='/profile/:id'>
-            <Profile
+        <Profile
           currentUser={currentUser}
           posts={posts}
           handleDelete={handleDelete}
-            />
+        />
       </Route>
-      
+
       <Route path='/posts/new'>
         <PostCreate
           handleCreate={handleCreate}

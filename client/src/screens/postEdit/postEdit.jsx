@@ -11,7 +11,7 @@ export default function PostEdit({ posts, handleUpdate }) {
   })
   const { title, description, img_url } = formData;
   const { id } = useParams();
-  
+
 
   useEffect(() => {
     const prefillFormData = () => {
@@ -35,26 +35,7 @@ export default function PostEdit({ posts, handleUpdate }) {
       [name]: value
     }))
   }
-  //regex found at https://stackoverflow.com/questions/3809401/what-is-a-good-regular-expression-to-match-a-url,
 
-  // const urlCheck = new RegExp(
-  //   /\b(https?:\/\/\S+(?:png|jpe?g|gif|photo)\S*)\b/gim
-  // );
-  // const checkImage = () => {
-  //   if (urlCheck.test(imageAdd)) {
-  //     return (
-  //       <button className="photo-button" type="button" onClick={handleImage}>
-  //         Add Image
-  //       </button>
-  //     );
-  //   } else {
-  //     return (
-  //       <p className="taken-message">
-  //         Please enter a valid image URL if you would like to add a photo
-  //       </p>
-  //     );
-  //   }
-  // };
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
@@ -71,7 +52,7 @@ export default function PostEdit({ posts, handleUpdate }) {
         />
       </label>
       <label>
-       Description:
+        Description:
         <textarea
           type='text'
           name='description'
@@ -80,14 +61,13 @@ export default function PostEdit({ posts, handleUpdate }) {
         />
       </label>
       <label>
-       Image-Link:
+        Image-Link:
         <input
           type='text'
           name='img_url'
           value={img_url}
           onChange={handleChange}
         />
-        {/* {checkImage()} */}
       </label>
       <button className="submit-button">Submit</button>
     </form>

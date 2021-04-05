@@ -69,7 +69,6 @@ const UserProfile = ({ currentUser, posts, handleDelete }) => {
   }
 
   const handleUpdateProfile = async () => {
-    console.log(profile)
     await updateProfile(profile?.id,
       {
         img_url: input,
@@ -78,7 +77,6 @@ const UserProfile = ({ currentUser, posts, handleDelete }) => {
     await fetchProfiles()
     setToggle(false)
     setInput('')
-    console.log(profiles)
   }
 
   const handleDeleteProfile = async (id) => {
@@ -138,7 +136,6 @@ const UserProfile = ({ currentUser, posts, handleDelete }) => {
             </React.Fragment>
           ))
         }</div>
-
 
       {open && (
         <Modal

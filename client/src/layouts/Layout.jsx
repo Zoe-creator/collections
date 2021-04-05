@@ -1,23 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-
 import './Layout.css'
 
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;
-
-  console.log(currentUser)
-
   const [greeting, setGreeting] = useState("")
   const [hour, setHour] = useState()
-
 
   const getHour = () => {
     const hourNow = new Date().getHours()
     setHour(hourNow)
   }
-
 
   useEffect(() => {
     getHour()
@@ -30,8 +24,6 @@ export default function Layout(props) {
       setGreeting("Night")
     }
   }, [hour])
-
-
 
   return (
     <div>
