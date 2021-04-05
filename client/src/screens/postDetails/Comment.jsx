@@ -62,14 +62,14 @@ export default function PostComment({ currentUser, postDetails }) {
         </div>
       }
       {(post?.comments.length >= 0 && currentUser) ?
-        <p>Comments:</p> : <p>you may log in to write a comment!</p>}
+        <p className='comment-heading'>Comments:</p> : <p>you may log in to write a comment!</p>}
 
       <div className='comments'>
         {post?.comments.map(comment =>
           <div className='comments-detail' key={comment.id}>
             <p className='comment-author'>Comment by: {currentUser?.username}</p>
             <p className='comment-text' key={comment.id}>{comment.comment_text}</p>
-            {currentUser?.id === comment.user_id && <button onClick={() => handleOpen(comment.id)}>Delete</button>}
+            {currentUser?.id === comment.user_id && <button className="comment-delete" onClick={() => handleOpen(comment.id)}>Delete</button>}
           </div>
         )}
       </div>
