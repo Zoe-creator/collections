@@ -3,7 +3,8 @@
 ## Collections Forum
 
 enables users to posts wishing collections and others may contact them if they have it,leave comments on items. 
-[Collection Forum](https://collection-forum.netlify.app/)
+
+- Living site: [Collection Forum](https://collection-forum.netlify.app/)
 <br>
 
 ## MVP
