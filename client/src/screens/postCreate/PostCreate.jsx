@@ -9,15 +9,16 @@ export default function PostCreate(props) {
     user_id: currentUser.id,
     title: '',
     description: '',
+    categories: '',
     img_url: ''
   })
-  const { user_id, title, description, img_url } = formData;
+
+  const { user_id, title, description,categories, img_url } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
-
       [name]: value
     }))
   }
@@ -45,6 +46,18 @@ export default function PostCreate(props) {
           value={description}
           onChange={handleChange}
         />
+      </label>
+      <label>Category:
+              <select
+          value={categories}
+          name="categories"
+          required
+          onChange={handleChange} >
+          <option value="unknown">Please select one</option>
+          <option value="book">book</option>
+          <option value="game">game</option>
+          <option value="bag">bag</option>
+        </select>
       </label>
       <label>
         Image-Link:

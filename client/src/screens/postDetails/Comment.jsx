@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getOnePost } from '../../services/posts';
 import { createComment } from '../../services/comments'
@@ -15,7 +15,7 @@ export default function PostComment({ currentUser, postDetails }) {
 
   useEffect(() => {
     fetchPost();
-  }, []);
+  }, [id]);
 
   const handleCommentSubmit = async () => {
     try {
@@ -66,7 +66,7 @@ export default function PostComment({ currentUser, postDetails }) {
 
       <div className='comments'>
         {post?.comments.map(comment =>
-          <div className='comments-detail'>
+          <div className='comments-detail' key={comment.id}>
             <p className='comment-author'>Comment by: {currentUser?.username}</p>
             <p className='comment-text' key={comment.id}>{comment.comment_text}</p>
             {currentUser?.id === comment.user_id && <button onClick={() => handleOpen(comment.id)}>Delete</button>}

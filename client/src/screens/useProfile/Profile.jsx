@@ -87,8 +87,6 @@ const UserProfile = ({ currentUser, posts, handleDelete }) => {
       console.log(error)
     }
   }
-
-  console.log(profiles)
   const userName = currentUser?.username.charAt(0).toUpperCase() + currentUser?.username.slice(1)
   return (
     <div className="profile-page">
@@ -122,9 +120,7 @@ const UserProfile = ({ currentUser, posts, handleDelete }) => {
                         <p className='post-description' >{post.description}</p>
                       </div>
                     </div>
-
                   </div>
-
 
                   <div className="posts-action">
                     <Link to={`/posts/${post.id}/edit`}><button>Edit</button></Link>

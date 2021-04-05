@@ -9,12 +9,9 @@ import './PostDetail.css'
 export default function PostDetails({ currentUser}) {
   const [postDetails, setPostDetails] = useState(null);
   const { id } = useParams();
-
   const [post, setPost] = useState();
   const [liked, setLiked] = useState(null);
   const [totalLikes, setTotalLikes] = useState(0);
-
-  console.log(id)
 
   useEffect(() => {
     const fetchOnePost = async () => {
@@ -22,7 +19,7 @@ export default function PostDetails({ currentUser}) {
       setPostDetails(postData);
     }
     fetchOnePost()
-  }, [])
+  }, [id])
 
   const toggleLike = () => {
     if (liked) {
@@ -39,7 +36,7 @@ export default function PostDetails({ currentUser}) {
     fetchPost();
     const likedPost = post?.likes.find(post => post.user_id === postDetails.user_id);
     setLiked(likedPost);
-  }, []);
+  }, [id]);
 
   const handleDeleteLike = async id => {
     try {
@@ -68,6 +65,7 @@ export default function PostDetails({ currentUser}) {
     setTotalLikes(response.likes.length);
   };
 
+  console.log(postDetails)
   return (
     <div className='details-comments'>
 
@@ -90,6 +88,7 @@ export default function PostDetails({ currentUser}) {
         <div className='detail-description'>
           <p>Name of Collection: {postDetails?.title}</p>
           <p>Description : {postDetails?.description}</p>
+          <p>categories: {postDetails?.categories}</p>
         </div>
       </div>
       <Comment currentUser={currentUser} postDetails={postDetails}/>
