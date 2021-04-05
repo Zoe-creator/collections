@@ -89,7 +89,7 @@ export default function PostDetails({ currentUser}) {
           </div>}
         <div className='detail-description'>
           <p>Name of Collection: {postDetails?.title}</p>
-          <p>Author's description of Collection: {postDetails?.description}</p>
+          <p>Description : {postDetails?.description}</p>
         </div>
       </div>
       <Comment currentUser={currentUser} postDetails={postDetails}/>
