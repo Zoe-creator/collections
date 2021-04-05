@@ -5,7 +5,7 @@ const Select = (props) => {
   const [isChecked, setIsChecked] = useState(false)
 
   const selectList = [
-    { id: 1, name: "Unknown", case: "Unkown" },
+    { id: 1, name: "Unknown", case: "Unknown" },
     { id: 2, name: "Book", case: "Book" },
     { id: 3, name: "Fossile", case: "Fossile" },
     { id: 4, name: "Jewelry", case: "Jewelry" },
