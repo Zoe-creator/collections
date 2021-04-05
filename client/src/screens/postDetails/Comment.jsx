@@ -62,7 +62,7 @@ export default function PostComment({ currentUser, postDetails }) {
         </div>
       }
       {(post?.comments.length >= 0 && currentUser) ?
-        <p className='comment-heading'>Comments:</p> : <p>you may log in to write a comment!</p>}
+        <p className='comment-heading'>Comments:</p> : <p className="not-user">you may log in to write a comment!</p>}
 
       <div className='comments'>
         {post?.comments.map(comment =>

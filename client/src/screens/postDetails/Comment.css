@@ -51,11 +51,19 @@ color: rgb(51, 3, 3);
 font-weight: bolder;
 }
 .comment-heading{
-  font-family: 'Anton', sans-serif;;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 10px;
+  text-align: left;
+
 }
 .comment-text{
   font-size:18px;
   margin:0;
+
+}
+.not-user{
+  font-weight: 600;
+  color:rgb(110, 10, 10)
 }
 
 .comment-delete{
