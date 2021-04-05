@@ -86,6 +86,7 @@ export default function PostDetails({ currentUser}) {
             </div>
           </div>}
         <div className='detail-description'>
+          <p>Posted By: { currentUser.username}</p>
           <p>Name of Collection: {postDetails?.title}</p>
           <p>Description : {postDetails?.description}</p>
         </div>
