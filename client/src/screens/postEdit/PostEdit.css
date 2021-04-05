@@ -15,7 +15,6 @@ label input,label textarea{
   flex-direction: column;
 }
 
-
 h3{
   font-weight: 400;
   padding:20px;
@@ -31,8 +30,6 @@ h3{
 .edit input {
   width: 350px;
 }
-
-
 
 .create-form textarea {
   max-width: 350px;
@@ -62,8 +59,6 @@ h3{
 .form input {
     max-width: 250px;
   }
-  
-
 
 .edit textarea {
   width:100px;

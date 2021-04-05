@@ -24,8 +24,6 @@ export default function Posts({ posts }) {
     }
   };
 
-
-
   return (
     <div>
         <Select onChange={handleSelector} />
