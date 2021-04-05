@@ -57,7 +57,7 @@ const UserProfile = ({ currentUser, posts, handleDelete }) => {
   const handleProfilesubmit = async () => {
     try {
       await createProfile({
-        user_id: currentUser.id,
+        user_id: currentUser?.id,
         img_url: input
       })
       await fetchProfiles()
@@ -72,7 +72,7 @@ const UserProfile = ({ currentUser, posts, handleDelete }) => {
     await updateProfile(profile?.id,
       {
         img_url: input,
-        user_id: currentUser.id
+        user_id: currentUser?.id
       })
     await fetchProfiles()
     setToggle(false)

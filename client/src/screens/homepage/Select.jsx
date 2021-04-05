@@ -4,8 +4,6 @@ import "./Select.css"
 const Select = (props) => {
   const [isChecked, setIsChecked] = useState(false)
 
-
-
   const selectList = [
     { id: 1, name: "Unknown", case: "Unkown" },
     { id: 2, name: "Book", case: "Book" },
