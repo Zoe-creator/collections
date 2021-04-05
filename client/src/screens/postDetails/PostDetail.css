@@ -25,6 +25,7 @@ align-items: center;
 align-items: center;
 justify-content:last baseline;
 }
+.poster-author
 
 @media (max-width: 500px) {
   .details-comments{
