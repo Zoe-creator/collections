@@ -48,7 +48,6 @@ export default function Layout(props) {
           <Link to='/posts'>Posts</Link>
           <Link to={`/profile/${currentUser.id}`}>Profile</Link>
           <Link to='/posts/new'>Post A Collection</Link>
-
           <hr />
         </nav>
       )}

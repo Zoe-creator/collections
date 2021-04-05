@@ -97,7 +97,6 @@ const UserProfile = ({ currentUser, posts, handleDelete }) => {
           {!!profile && <button onClick={() => handleDeleteProfile(profile?.id)}>Delete my Profile</button>}
           <p className="add-pic-link" onClick={() => setToggle(!toggle)} > {profile ? 'Update My Profile' : 'Add a profile Picture'} </p>
           {profile ? <img className="profile-pic" src={profile?.img_url} alt='your profile pic' /> : <p >🥺 You don't have Profile picture yet!</p>}
-
           <h2>{currentUser?.email}</h2>
           <h3>{currentUser?.DOB}</h3>
 

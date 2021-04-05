@@ -13,7 +13,7 @@ export default function PostCreate(props) {
     img_url: ''
   })
 
-  const { user_id, title, description,categories, img_url } = formData;
+  const { user_id, title, description, categories, img_url } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -53,7 +53,7 @@ export default function PostCreate(props) {
           name="categories"
           required
           onChange={handleChange} >
-          <option value="unknown">Please select one</option>
+          <option value="unknown" >Please select one</option>
           <option value="book">book</option>
           <option value="game">game</option>
           <option value="bag">bag</option>
@@ -66,9 +66,7 @@ export default function PostCreate(props) {
           name='img_url'
           value={img_url}
           onChange={handleChange}
-        // onError={handleError}
         />
-        {/* {checkImage()} */}
       </label>
       <button>Submit</button>
     </form>
