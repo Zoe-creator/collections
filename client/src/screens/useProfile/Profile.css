@@ -12,6 +12,10 @@ width:100%
   display:flex;
   flex-direction: column; 
 }
+.welcome-message{
+  font-family: 'Train One', cursive;
+  color:rgba(71, 6, 38, 0.7);
+}
 .add-pic-link:hover{
   color:rgb(68, 27, 27);
   font-weight:bolder;

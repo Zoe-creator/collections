@@ -42,12 +42,14 @@ margin-top: 5px;
 .comments-detail{
 display: flex;
 flex-direction: column;
+background-color: rgba(71, 6, 38, 0.4);
 border: 1px dotted rgb(48, 3, 10);
 margin-bottom: 5px;
 }
 .comment-author{
 color: rgb(51, 3, 3);
 font-weight: bolder;
+
 }
 
 
