@@ -13,7 +13,7 @@ export default function PostCreate(props) {
     img_url: ''
   })
 
-  const categoriesOptions = ["Unknown", "Book", "Fossile", "Jewelry", "Game", "Doll", "Toy"]
+  const categoriesOptions = ["Unknown", "Book", "Fossile", "Jewelry", "Game", "Toy","Doll", "Tech","Bag"]
 
   const { user_id, title, description, categories, img_url } = formData;
 
@@ -66,9 +66,8 @@ export default function PostCreate(props) {
           required
           onChange={handleChange} >
           <option value="" >Make a Selection</option>
-
-          {categoriesOptions.map(category =>
-            <option value={category} >{category}</option>
+          {categoriesOptions.map((category, index) =>
+            <option value={category} key={index} >{category}</option>
           )}
 
         </select>

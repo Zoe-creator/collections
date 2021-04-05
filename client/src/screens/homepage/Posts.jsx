@@ -24,28 +24,26 @@ export default function Posts({ posts }) {
     }
   };
 
-  const handleSubmit = (event) => event.preventDefault();
 
 
   return (
     <div>
-        <div className="select-box">
-        <Select  onSubmit={handleSubmit} onChange={handleSelector} />
-      </div>
+        <Select onChange={handleSelector} />
       <hr />
       <div className="home-img" >
-    
-      {
-        queriedPosts.length ? queriedPosts.map((post) =>
-          <Link key={post.id} to={`/posts/${post.id}`}><img src={post.img_url} alt={post.title} /></Link>
-        ) :
-          posts.map(post =>
+
+        {
+          queriedPosts.length ? queriedPosts.map((post) =>
             <Link key={post.id} to={`/posts/${post.id}`}><img src={post.img_url} alt={post.title} /></Link>
-          )
-      }
-      <br />
-    </div>  
+          ) :
+            posts.map(post =>
+              <Link key={post.id} to={`/posts/${post.id}`}><img src={post.img_url} alt={post.title} /></Link>
+            )
+          
+        }
+        <br />
+      </div>
     </div>
-  
+
   )
 }

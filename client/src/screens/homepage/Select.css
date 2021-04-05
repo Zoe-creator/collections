@@ -1,11 +1,25 @@
-.select, .select input{
-  display: flex;
-  flex-direction: row;
-padding:10px;
-align-items: center;
-}
-
 .select-box{
   display: flex;
   flex-direction: row;
+  width:100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
+.select{
+  display: flex;
+  flex-direction: row;
+padding:5px;
+align-items: center;
+
+width:100%;
+}
+
+
+.select-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+

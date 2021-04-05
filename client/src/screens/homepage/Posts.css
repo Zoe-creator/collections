@@ -1,3 +1,4 @@
+
 .home-img{
   display: flex;
 flex-direction:row;
@@ -7,13 +8,13 @@ flex-direction:row;
 
 }
 
-/* .select-box{
-  display: flex;
-  flex-direction: row;
-} */
 @media (max-width: 500px) {
  .home-img {
       width: 100%;
   }
 
 }
+/* input[type="checkbox"]#checkbox1:checked + span {
+  border-color: red;
+background-color:red;
+} */
