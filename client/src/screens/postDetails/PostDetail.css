@@ -25,7 +25,19 @@ align-items: center;
 align-items: center;
 justify-content:last baseline;
 }
-.poster-author
+.detail-description span{
+  color:rgb(82, 4, 4);
+font-weight: 500;
+  text-shadow:2px 2px 8px red;
+  font-size: 16px;
+
+}
+.poster-author, .poster-name ,.poster-description{
+  color:rgb(102, 27, 27,.8);
+  flex-direction:column ;
+  display:flex;
+
+}
 
 @media (max-width: 500px) {
   .details-comments{
