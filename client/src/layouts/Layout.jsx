@@ -15,7 +15,6 @@ export default function Layout(props) {
 
   useEffect(() => {
     getHour()
-    console.log(hour)
     if (hour < 12) {
       setGreeting("Morning")
     } else if (hour < 18) {

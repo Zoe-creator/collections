@@ -6,7 +6,7 @@ export default function PostCreate(props) {
   const { handleCreate, currentUser } = props;
 
   const [formData, setFormData] = useState({
-    user_id: currentUser.id,
+    user_id: currentUser?.id,
     title: '',
     description: '',
     categories: '',

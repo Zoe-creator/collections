@@ -1,7 +1,6 @@
 .like{
   display: flex;
   left:-100vh;
-  /* z-index: 2; */
 }
 .comment{
   display: flex;
@@ -57,12 +56,10 @@ font-weight: bolder;
   .comment{
     width:100%;
     align-items: center;
-    /* justify-content: space-evenly; */
-    /* flex-direction: row; */
   }
- .comments{
+.comments{
 height:100%;
 -webkit-overflow-scrolling: touch;
- }
+}
 
 }

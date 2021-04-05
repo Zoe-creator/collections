@@ -65,7 +65,6 @@ export default function PostDetails({ currentUser}) {
     setTotalLikes(response.likes.length);
   };
 
-  console.log(postDetails?.user.username)
   return (
     <div className='details-comments'>
 
