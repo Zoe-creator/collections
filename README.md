@@ -3,7 +3,7 @@
 ## Collections Forum
 
 enables users to posts wishing collections and others may contact them if they have it,leave comments on items. 
-
+[Collection Forum](https://collection-forum.netlify.app/)
 <br>
 
 ## MVP
@@ -128,7 +128,7 @@ src
 
 > Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
-![ERD Sample](https://res.cloudinary.com/lizhenwen727/image/upload/v1617135192/Screen_Shot_2021-03-30_at_4.12.52_PM_c9wxjx.png)
+![ERD Sample](https://res.cloudinary.com/lizhenwen727/image/upload/v1617659278/Screen_Shot_2021-04-05_at_5.46.25_PM_eyo7g3.png)
 <br>
 
 ***
