@@ -8,7 +8,7 @@ import axios from 'axios'
 
 const api = axios.create({
     baseURL: process.env.NODE_ENV === 'production'
-        ? 'https://collection-forums-server.herokuapp.com/api'
+        ? 'https://collection-forum.herokuapp.com/'
         : 'http://localhost:3000/'
 })
 
