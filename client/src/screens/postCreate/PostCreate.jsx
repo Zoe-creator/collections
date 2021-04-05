@@ -26,13 +26,14 @@ export default function PostCreate(props) {
   }
 
   return (
-    <form className="create-form" onSubmit={(e) => {
+    <form className="create-form"  className="create"onSubmit={(e) => {
       e.preventDefault();
       handleCreate(formData);
+     
     }}>
       <h3>Create A Collection</h3>
       <label>
-        Name of Your Collection:
+        Name of Collection:
         <input
           type='text'
           name='title'
@@ -42,7 +43,7 @@ export default function PostCreate(props) {
       </label>
       <label>
         Description:
-        <textarea
+        <textarea className="create-textarea"
           type='text'
           name='description'
           value={description}
@@ -59,7 +60,7 @@ export default function PostCreate(props) {
         />
       </label>
 
-      <label>Category:
+      <label className="category">Category:
               <select
           value={categories}
           name="categories"
@@ -73,7 +74,7 @@ export default function PostCreate(props) {
         </select>
       </label>
 
-      <button>Submit</button>
+      <button className="submit-button">Submit</button>
     </form>
   )
 }

@@ -38,12 +38,18 @@ form textarea {
   min-width: 350px;
 }
 
-
+.category select{
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  min-width: 350px;
+}
 
 form .submit-button {
   margin-bottom: 100px;
   margin-top: 50px;
 }
+
 
 @media screen and (max-width: 500px) {
 form  {
@@ -55,15 +61,18 @@ form  {
   }
 
 form  input {
-    max-width: 250px;
+    max-width: 100%;
   }
   
 
-form  textarea {
+.create-textarea{
+    width:100px;
+  }
+  .category select{
+
     max-width: 250px;
     min-width: 250px;
   }
-
 
 }
 

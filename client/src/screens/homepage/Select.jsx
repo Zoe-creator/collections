@@ -35,11 +35,12 @@ const Select = (props) => {
             <label className='select' >
               {item.name}
               <input
+                className="checkbox"
                 key={item.id}
                 name={item.name}
                 onChange={handleChange}
                 type="checkbox"
-                {isChecked?}
+                style={{backgroundColor: `yellow`}}
                 check={isChecked}
                 value={item.case}
               />
