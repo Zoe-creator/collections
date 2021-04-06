@@ -39,6 +39,7 @@ margin-top:0;
 .welcome-message{
   font-family: 'Train One', cursive;
   color:rgba(71, 6, 38, 0.7);
+  margin-bottom: 10px;
 }
 .add-pic-link{
   font-family: 'Permanent Marker', cursive;
@@ -54,6 +55,9 @@ margin-top:0;
   50% {
     opacity: 0;
   }
+}
+.posts-action button{
+  margin-top: 10px;
 }
 .user-posts{
   display:flex;

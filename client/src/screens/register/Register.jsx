@@ -59,13 +59,12 @@ export default function Register({ handleRegister }) {
           />
         </label>
         <br />
-        <div className='birthday'>
-          <p>Birthday</p>
+     
 
-          <label>
+        <label>
+          Birthday:
             <input type='date' name='DOB' value={DOB} onChange={handleChange} />
           </label>
-        </div>
         <button>Submit</button>
       </form>
       <Link to='/login' className="login-link">I have an Account</Link>
