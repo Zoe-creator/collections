@@ -10,7 +10,7 @@ export default function Modal(props) {
         <button onClick={() => {
           handleDelete(open)
           handleOpen(false)
-        }}>yes</button>
+        }}>✅</button>
       </div>
     </div>
   )
