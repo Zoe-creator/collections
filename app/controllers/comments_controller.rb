@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
   def index
     @comments = Comment.all
 
-    render json: @comments, include: :subcomments
+    render json: @comments, include: [:subcomments, :user]
   end
 
   # GET /comments/1
