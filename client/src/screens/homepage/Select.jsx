@@ -26,12 +26,11 @@ const Select = ({onChange}) => {
     <div className="select-box">
       {
         selectList.map(item => 
-          <div className='select-div'>
-            <label className='select' >
+          <div className='select-div' key={item.id}>
+            <label className='select'  >
               {item.name}
               <input
                 className="checkbox"
-                key={item.id}
                 name={item.name}
                 onChange={handleChange}
                 type="checkbox"
