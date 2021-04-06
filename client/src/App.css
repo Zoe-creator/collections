@@ -12,26 +12,53 @@
   z-index: 2;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .modal {
+  display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  width:40%;
   border-radius: 5px;
   border: 1px solid black;
   background: white;
+  height:200px;
  
 }
 .modal *{
   padding:10px;
+  /* margin:0; */
 }
 .delete-confirm-message{
   font-size:18px;
-  padding: 30px;
+  /* padding: 30px; */
+  margin:auto;
 }
-.cancel-delete{
+.modal .cancel-delete{
+  /* width:10%; */
+  /* height:40px; */
+  text-align: center;
+  /* margin: 0; */
+  display: flex;
+  float: left;
+height:10px;
+padding:0;
+border:0;
+top:200px;
+margin-top: 0;
+}
+/* .cancel-delete{
  top:-200px;
+ margin: 0;
+
+} */
+.delete-confirmed{
+  display: flex;
+  width:90%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
