@@ -5,17 +5,25 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+  background-color: rgb(71,11,11,.1);
+  padding:10px;
+
 }
 .select{
   display: flex;
   flex-direction: row;
-padding:5px;
+padding:2px;
 align-items: center;
 
 width:100%;
 }
-
+.select-div label{
+  font-size: 12px;
+  font-weight: 300;
+  color:black;
+}
 .select-div{
+
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
