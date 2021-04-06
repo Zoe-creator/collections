@@ -45,6 +45,7 @@ margin-top:0;
   font-family: 'Permanent Marker', cursive;
 }
 
+
 .add-pic-link:hover{
   color:rgb(68, 27, 27);
   font-weight:bolder;
@@ -124,6 +125,10 @@ button:hover{
 }
 .posts-action *{
   padding:10px;
+}
+.title-img-desc img{
+  height:300px;
+  width:300px
 }
 
 @media (max-width: 500px) {

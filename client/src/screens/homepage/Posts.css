@@ -7,6 +7,10 @@
   margin: 30px 30px;
 
 }
+.home-img img{
+ height:300px;
+
+}
 
 @media (max-width: 500px) {
  .home-img {
