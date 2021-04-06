@@ -107,7 +107,6 @@ const UserProfile = ({ currentUser, posts, handleDelete }) => {
         {
           posts.map(post => (
             <React.Fragment key={post.id}>
-
               {
                 currentUser?.id === post.user_id &&
                 <div className="user-posts">
@@ -120,17 +119,16 @@ const UserProfile = ({ currentUser, posts, handleDelete }) => {
                       </div>
                     </div>
                   </div>
-
                   <div className="posts-action">
                     <Link to={`/posts/${post.id}/edit`}><button>Edit</button></Link>
                     <div><button onClick={() => handleOpen(post.id)}>delete</button></div>
                   </div>
                 </div>
               }
-
             </React.Fragment>
           ))
-        }</div>
+        }
+      </div>
 
       {open && (
         <Modal

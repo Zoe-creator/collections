@@ -66,7 +66,6 @@ export default function PostDetails({ currentUser}) {
 
   return (
     <div className='details-comments'>
-
       <div className='details'>
         <div className='detail-img'>
           <img src={postDetails?.img_url} alt={postDetails?.title} />

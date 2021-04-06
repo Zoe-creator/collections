@@ -9,7 +9,6 @@ export default function Register({ handleRegister }) {
     email: '',
     password: '',
     DOB: '',
-
   })
   const { username, email, password, DOB } = formData;
 
@@ -59,12 +58,10 @@ export default function Register({ handleRegister }) {
           />
         </label>
         <br />
-     
-
         <label>
           Birthday:
             <input type='date' name='DOB' value={DOB} onChange={handleChange} />
-          </label>
+        </label>
         <button>Submit</button>
       </form>
       <Link to='/login' className="login-link">I have an Account</Link>

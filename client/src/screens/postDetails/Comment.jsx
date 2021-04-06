@@ -27,7 +27,6 @@ export default function PostComment({ currentUser, postDetails }) {
       //fetch new comment
       await fetchPost()
       setInput('');
-
     } catch (error) {
       console.log(error);
     }

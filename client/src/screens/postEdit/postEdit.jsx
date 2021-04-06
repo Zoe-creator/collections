@@ -8,12 +8,12 @@ export default function PostEdit({ posts, handleUpdate }) {
     title: '',
     description: '',
     img_url: '',
-    categories:'',
+    categories: '',
   })
-  const { title, description, img_url,categories } = formData;
+  const { title, description, img_url, categories } = formData;
   const { id } = useParams();
 
-  const categoriesOptions = ["Unknown", "Book", "Fossile", "Jewelry", "Game", "Toy","Doll", "Tech","Bag"]
+  const categoriesOptions = ["Unknown", "Book", "Fossile", "Jewelry", "Game", "Toy", "Doll", "Tech", "Bag"]
 
   useEffect(() => {
     const prefillFormData = () => {
@@ -22,7 +22,7 @@ export default function PostEdit({ posts, handleUpdate }) {
         title: postItem.title,
         description: postItem.description,
         img_url: postItem.img_url,
-        categories:postItem.categories
+        categories: postItem.categories
       })
     }
     if (posts.length) {
@@ -40,10 +40,9 @@ export default function PostEdit({ posts, handleUpdate }) {
   }
 
   return (
-    <form  className="edit"onSubmit={(e) => {
+    <form className="edit" onSubmit={(e) => {
       e.preventDefault();
       handleUpdate(id, formData);
-     
     }}>
       <h3 className="edit-title">Edit My Collection</h3>
       <label>

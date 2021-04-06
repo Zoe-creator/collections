@@ -29,7 +29,6 @@ export default function PostCreate(props) {
     <form className="create-form" className="create" onSubmit={(e) => {
       e.preventDefault();
       handleCreate(formData);
-
     }}>
       <h3 className="create-title">Create A Collection</h3>
       <label>
@@ -70,7 +69,6 @@ export default function PostCreate(props) {
           {categoriesOptions.map((category, index) =>
             <option value={category} key={index} >{category}</option>
           )}
-
         </select>
       </label>
 
