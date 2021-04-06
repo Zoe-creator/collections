@@ -30,10 +30,10 @@ export default function Posts({ posts }) {
         {
           queriedPosts.length ? queriedPosts.map((post) =>
             <Link key={post.id} to={`/posts/${post.id}`}><img src={post.img_url} alt={post.title} /></Link>
-          ) :
+          ).reverse() :
             posts.map(post =>
               <Link key={post.id} to={`/posts/${post.id}`}><img src={post.img_url} alt={post.title} /></Link>
-            ) 
+            ).reverse() 
         }
       </div>
     </div>

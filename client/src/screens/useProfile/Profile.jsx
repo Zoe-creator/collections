@@ -126,7 +126,7 @@ const UserProfile = ({ currentUser, posts, handleDelete }) => {
                 </div>
               }
             </React.Fragment>
-          ))
+          )).reverse()
         }
       </div>
 
