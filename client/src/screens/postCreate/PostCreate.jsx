@@ -31,7 +31,7 @@ export default function PostCreate(props) {
       handleCreate(formData);
 
     }}>
-      <h3>Create A Collection</h3>
+      <h3 className="create-title">Create A Collection</h3>
       <label>
         Name of Collection:
         <input
