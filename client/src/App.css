@@ -18,46 +18,32 @@
 
 .modal {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width:40%;
+  flex-wrap: wrap;
+  width:30%;
   border-radius: 5px;
   border: 1px solid black;
   background: white;
-  height:200px;
+  height:150px;
  
 }
 .modal *{
   padding:10px;
-  /* margin:0; */
 }
 .delete-confirm-message{
   font-size:18px;
-  /* padding: 30px; */
   margin:auto;
 }
 .modal .cancel-delete{
-  /* width:10%; */
-  /* height:40px; */
+ 
   text-align: center;
-  /* margin: 0; */
-  display: flex;
-  float: left;
-height:10px;
-padding:0;
-border:0;
-top:200px;
-margin-top: 0;
-}
-/* .cancel-delete{
- top:-200px;
- margin: 0;
+  flex:50%;
 
-} */
+}
+
+
 .delete-confirmed{
   display: flex;
-  width:90%;
+  width:100%;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
