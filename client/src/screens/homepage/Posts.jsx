@@ -27,19 +27,15 @@ export default function Posts({ posts }) {
   return (
     <div>
         <Select onChange={handleSelector} />
-      <hr />
       <div className="home-img" >
-
         {
           queriedPosts.length ? queriedPosts.map((post) =>
             <Link key={post.id} to={`/posts/${post.id}`}><img src={post.img_url} alt={post.title} /></Link>
           ) :
             posts.map(post =>
               <Link key={post.id} to={`/posts/${post.id}`}><img src={post.img_url} alt={post.title} /></Link>
-            )
-          
+            ) 
         }
-        <br />
       </div>
     </div>
 

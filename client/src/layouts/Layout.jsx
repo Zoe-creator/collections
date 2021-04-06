@@ -41,7 +41,6 @@ export default function Layout(props) {
             </nav>
         }
       </header>
-      {/* <hr /> */}
       {currentUser && (
         <nav>
           <Link to='/posts'>Posts</Link>

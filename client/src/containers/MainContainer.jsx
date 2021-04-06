@@ -48,7 +48,6 @@ export default function MainContainer({ currentUser }) {
           handleDelete={handleDelete}
         />
       </Route>
-
       <Route path='/posts/new'>
         <PostCreate
           handleCreate={handleCreate}

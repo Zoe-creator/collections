@@ -25,7 +25,7 @@ const Select = (props) => {
   return (
     <div className="select-box">
       {
-        selectList.map((item) => (
+        selectList.map(item => 
           <div className='select-div'>
             <label className='select' >
               {item.name}
@@ -40,7 +40,6 @@ const Select = (props) => {
               />
             </label>
           </div>
-        )
         )}
     </div>)
 }
