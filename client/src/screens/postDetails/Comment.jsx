@@ -27,6 +27,7 @@ export default function PostComment({ currentUser, postDetails }) {
       //fetch new comment
       await fetchPost()
       setInput('');
+
     } catch (error) {
       console.log(error);
     }
@@ -65,8 +66,8 @@ export default function PostComment({ currentUser, postDetails }) {
 
       <div className='comments'>
         {post?.comments.map(comment =>
-          <div className='comments-detail' key={comment.user_id}>
-            <p className='comment-author'>Comment by: {currentUser?.username}</p>
+          <div className='comments-detail' key={comment.id}>
+            <p className='comment-author'>Comment by: {comment.user.username}</p>
             <p className='comment-text' key={comment.id}>{comment.comment_text}</p>
             {currentUser?.id === comment.user_id && <button className="comment-delete" onClick={() => handleOpen(comment.id)}>Delete</button>}
           </div>
