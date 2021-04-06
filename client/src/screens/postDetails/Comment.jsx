@@ -71,7 +71,7 @@ export default function PostComment({ currentUser, postDetails }) {
             <p className='comment-text' key={comment.id}>{comment.comment_text}</p>
             {currentUser?.id === comment.user_id && <button className="comment-delete" onClick={() => handleOpen(comment.id)}>Delete</button>}
           </div>
-        )}
+        ).reverse()}
       </div>
 
       {open && (
