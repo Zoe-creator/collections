@@ -44,6 +44,7 @@ margin-top:0;
 .add-pic-link{
   font-family: 'Permanent Marker', cursive;
 }
+
 .add-pic-link:hover{
   color:rgb(68, 27, 27);
   font-weight:bolder;
@@ -94,6 +95,18 @@ align-items: center;
 .title-img-desc div{
   width:50%;
 }
+.title-img-desc a:hover{
+  color:rgb(68, 27, 27);
+  font-weight:bolder;
+
+  animation: blinker 1s linear infinite;
+}
+.post-title{
+color: rgb(53,16,32);
+font-size:20px;
+letter-spacing:5px;
+}
+
 button{
   width:80px;
   text-align: center;
