@@ -95,7 +95,7 @@ const UserProfile = ({ currentUser, posts, handleDelete }) => {
           <h1 className="welcome-message">Welcome Home 😊 {userName}</h1>
           <div className='add-pic-input' style={{ 'width': '200px' }}>{toggle && (!!profile ? handleShowUpdateBox() : handleShowAddBox())}</div>
           {!!profile && <button onClick={() => handleDeleteProfile(profile?.id)}>Delete my Profile</button>}
-          <p className="add-pic-link" onClick={() => setToggle(!toggle)} > {profile ? 'Update My Profile' : 'Add a profile Picture'} </p>
+          <p className="add-pic-link" onClick={() => setToggle(!toggle)} > {profile ? 'Update My Profile Picture' : 'Add a profile Picture'} </p>
           {profile ? <img className="profile-pic" src={profile?.img_url} alt='your profile pic' /> : <p >🥺 You don't have Profile picture yet!</p>}
           <h2 className='user-email'>{currentUser?.email}</h2>
           <h3 className='user-dob'>{currentUser?.DOB}</h3>

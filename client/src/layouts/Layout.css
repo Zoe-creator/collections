@@ -10,10 +10,7 @@
 a{
   text-decoration: none;
 }
-/* hr{
-  color:black;
-  height:5px;
-} */
+
 nav{
   display: flex;
   flex-direction: row;
@@ -25,7 +22,6 @@ nav{
 }
 nav a{
   display: flex;
-/* margin:auto; */
  padding-left: 40px;
  font-size: 18px;
  font-family: 'Permanent Marker', cursive;
