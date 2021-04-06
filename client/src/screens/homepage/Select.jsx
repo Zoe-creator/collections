@@ -1,24 +1,24 @@
 import { useState } from "react";
 
 import "./Select.css"
-const Select = (props) => {
+const Select = ({onChange}) => {
   const [isChecked, setIsChecked] = useState(false)
 
   const selectList = [
-    { id: 1, name: "Unknown", case: "Unknown" },
-    { id: 2, name: "Book", case: "Book" },
-    { id: 3, name: "Fossile", case: "Fossile" },
-    { id: 4, name: "Jewelry", case: "Jewelry" },
-    { id: 5, name: "Game", case: "Game" },
-    { id: 6, name: "Toy", case: "Toy" },
-    { id: 7, name: "Doll", case: "Doll" },
-    { id: 8, name: "Tech", case: "Tech" },
-    { id: 9, name: "Bag", case: "Bag" },
+    { id: 1, name: "Unknown" },
+    { id: 2, name: "Book"},
+    { id: 3, name: "Fossile"},
+    { id: 4, name: "Jewelry"},
+    { id: 5, name: "Game" },
+    { id: 6, name: "Toy"},
+    { id: 7, name: "Doll"},
+    { id: 8, name: "Tech"},
+    { id: 9, name: "Bag"},
 
   ];
 
-  const handleChange = (event) => {
-    props.onChange(event)
+  const handleChange = (e) => {
+    onChange(e)
     setIsChecked((curr) => !curr)
   }
 
@@ -36,7 +36,7 @@ const Select = (props) => {
                 onChange={handleChange}
                 type="checkbox"
                 check={isChecked.toString()}
-                value={item.case}
+                value={item.name}
               />
             </label>
           </div>

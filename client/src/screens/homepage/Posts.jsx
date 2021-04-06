@@ -8,17 +8,16 @@ import "../homepage/Posts.css"
 export default function Posts({ posts }) {
   const [queriedPosts, setQueriedPosts] = useState([])
 
-  const handleSelector = (event) => {
-    if (event.target.checked) {
+  const handleSelector = (e) => {
+    if (e.target.checked) {
       const filteredResult = posts.filter((post) =>
-        event.target.checked
-        && post.categories.includes(event.target.value)
+        post.categories.includes(e.target.value)
       );
       const filteredArr = Array.from(new Set([...filteredResult, ...queriedPosts]))
       setQueriedPosts(filteredArr);
     } else {
       const filteredResult = queriedPosts.filter(post => {
-        return !post.categories.includes(event.target.value)
+        return !post.categories.includes(e.target.value)
       })
       setQueriedPosts(filteredResult)
     }
