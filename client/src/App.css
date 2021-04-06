@@ -23,11 +23,15 @@
   border-radius: 5px;
   border: 1px solid black;
   background: white;
-  padding: 30px;
+ 
+}
+.modal *{
+  padding:10px;
 }
 .delete-confirm-message{
   font-size:18px;
+  padding: 30px;
 }
 .cancel-delete{
- 
+ top:-200px;
 }
