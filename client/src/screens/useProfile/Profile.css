@@ -87,8 +87,12 @@ align-items: center;
 button{
   width:80px;
   text-align: center;
-  color:rgb(72, 12, 211);
+  color:rgb(59, 4, 27);
   font-weight: bolder;
+}
+button:hover{
+  color:rgb(59,2,27,0.6);
+  background-color: rgba(53, 16, 32, 0.1);
 }
 .posts-action{
   display: flex;
@@ -110,8 +114,6 @@ button{
     display: flex;
     flex-direction: row;
     width:100%;
-  /* padding:10px; */
-  /* margin:auto; */
   }
 
   .title-img-desc{

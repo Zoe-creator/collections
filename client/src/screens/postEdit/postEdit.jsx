@@ -45,7 +45,7 @@ export default function PostEdit({ posts, handleUpdate }) {
       handleUpdate(id, formData);
      
     }}>
-      <h3>Edit My Collection</h3>
+      <h3 className="edit-title">Edit My Collection</h3>
       <label>
         Name of Collection:
         <input

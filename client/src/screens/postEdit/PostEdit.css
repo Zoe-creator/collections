@@ -5,11 +5,20 @@
   width: 80%;
   margin:auto;
   align-items: center;
+
 }
 .edit *{
 margin-bottom: 10px;
 }
+.edit-title{
+  color: rgb(51, 2, 2);
+  font-size: 25px;
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 5px;
+  text-shadow: 5px 5px 10px rgb(71,11,11,.9);
 
+
+}
 label input,label textarea{
   display: flex;
   flex-direction: column;
