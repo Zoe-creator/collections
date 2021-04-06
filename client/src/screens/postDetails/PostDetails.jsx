@@ -4,6 +4,7 @@ import { getOnePost } from '../../services/posts';
 import { createLike, deleteLike, getLikes } from '../../services/likes'
 import Comment from './Comment'
 
+import ErrorReplacement from '../../assets/images.png'
 import './PostDetail.css'
 
 export default function PostDetails({ currentUser }) {
@@ -68,11 +69,16 @@ export default function PostDetails({ currentUser }) {
     setTotalLikes(response.likes.length);
   };
 
+  //handle img error
+  function defaultSrc(e) {
+    e.target.src=ErrorReplacement
+  }
+
   return (
     <div className='details-comments'>
       <div className='details'>
         <div className='detail-img'>
-          <img src={postDetails?.img_url} alt={postDetails?.title} />
+          <img src={postDetails?.img_url} alt={postDetails?.title} onError={ defaultSrc}/>
         </div>
 
         {currentUser &&

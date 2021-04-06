@@ -3,6 +3,7 @@ import { getProfiles, updateProfile, createProfile, deleteProfile } from '../../
 import { Link } from "react-router-dom"
 import Modal from '../../components/modal/Modal';
 
+import ErrorReplacement from '../../assets/images.png'
 import './Profile.css'
 
 const UserProfile = ({ currentUser, posts, handleDelete }) => {
@@ -87,6 +88,9 @@ const UserProfile = ({ currentUser, posts, handleDelete }) => {
       console.log(error)
     }
   }
+  function defaultSrc(e) {
+    e.target.src=ErrorReplacement
+  }
   const userName = currentUser?.username.charAt(0).toUpperCase() + currentUser?.username.slice(1)
   return (
     <div className="profile-page">
@@ -112,7 +116,7 @@ const UserProfile = ({ currentUser, posts, handleDelete }) => {
                 <div className="user-posts">
                   <div className="post-info">
                     <div className="title-img-desc">
-                      <img src={post.img_url} alt={post.title} />
+                      <img src={post.img_url} alt={post.title} onError={defaultSrc}  />
                       <div>
                         <Link to={`/posts/${post.id}`}><p className='post-title'>{post.title}</p></Link>
                         <p className='post-description' >{post.description}</p>
