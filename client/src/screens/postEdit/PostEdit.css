@@ -5,7 +5,6 @@
   width: 80%;
   margin:auto;
   align-items: center;
-
 }
 .edit *{
 margin-bottom: 10px;
@@ -25,7 +24,6 @@ label input,label textarea{
 h3{
   font-weight: 400;
   padding:20px;
-
 }
 
 .edit div {
@@ -75,5 +73,5 @@ h3{
     
     max-width: 250px;
     min-width: 250px;
-      }
+  }
 }

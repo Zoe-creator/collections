@@ -3,7 +3,7 @@ div{
   flex-direction: column;
 }
 .login{
-font: italic small-caps bold 30px/30px Georgia, serif
+  font: italic small-caps bold 30px/30px Georgia, serif
 }
 
 .register-link{

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import './Modal.css'
 
 export default function Modal(props) {
@@ -14,7 +15,6 @@ export default function Modal(props) {
             handleOpen(false)
           }}>Yes</button>
         </div>
-
       </div>
     </div>
   )

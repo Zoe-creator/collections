@@ -1,7 +1,7 @@
 
 .home-img{
   display: flex;
-flex-direction:row;
+  flex-direction:row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 0 30px;

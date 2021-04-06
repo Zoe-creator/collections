@@ -1,6 +1,6 @@
 .comment{
-display: flex;
-width:50%
+  display: flex;
+  width:50%
 }
 .details-comments{
   display:flex;
@@ -11,9 +11,9 @@ width:50%
 
 .details{
   display: flex;
-flex-direction: column;
-width:50%;
-align-items: center;
+  flex-direction: column;
+  width:50%;
+  align-items: center;
 }
 .detail-img{
   display: flex;
@@ -22,12 +22,12 @@ align-items: center;
 .detail-description{
   display: flex;
   flex-direction: column;
-align-items: center;
-justify-content:last baseline;
+  align-items: center;
+  justify-content:last baseline;
 }
 .detail-description span{
   color:rgb(82, 4, 4);
-font-weight: 500;
+  font-weight: 500;
   text-shadow:2px 2px 8px red;
   font-size: 16px;
 
